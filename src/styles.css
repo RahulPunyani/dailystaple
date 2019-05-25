@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~font-awesome/css/font-awesome.css";
+
+.logo
+{
+    height: 60px;
+    width: 120px;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: teal
+}
+
+.navbar{
+    width: 100%;
+}
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;    
+    padding-left: 30%;
+}
+
+.mat-option:first-child
+{
+    margin-top: 50px;
+}

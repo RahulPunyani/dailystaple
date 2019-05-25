@@ -8,8 +8,7 @@
     width: 120px;
 }
 body{
-    padding: 0px;
-    margin: 0px;
+    
     background-color: teal
 }
 
@@ -30,3 +29,18 @@ body{
 {
     margin-top: 50px;
 }
+
+.offers {
+    max-width: 100%;
+    
+  }
+  
+  .example-card {
+    max-width: 400px;
+    display: inline-block;
+  }
+
+  .mat-card{      
+      display: inline-block;
+  }
+  

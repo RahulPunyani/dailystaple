@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
-import {MatButtonModule, MatCheckboxModule , MatMenuModule, MatSidenavModule, MatSelectModule, MatBadgeModule, MatCardModule} from '@angular/material';
+import {MatSnackBarModule, MatButtonModule, MatCheckboxModule , MatMenuModule, MatSidenavModule, MatSelectModule, MatBadgeModule, MatCardModule, MatChipsModule} from '@angular/material';
 import { VegetablesComponent } from './vegetables/vegetables.component';
 
 
@@ -26,7 +26,9 @@ import { VegetablesComponent } from './vegetables/vegetables.component';
     MatSidenavModule,
     MatSelectModule,
     MatBadgeModule,
-    MatCardModule
+    MatCardModule,
+    MatChipsModule,
+    MatSnackBarModule
 
   ],
   providers: [],

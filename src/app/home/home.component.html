@@ -23,8 +23,9 @@
         </mat-card-header>
         <img mat-card-image [src]="vegetable.imageUrl" height="180px">
         <mat-card-content>
+          <p>{{ vegetable.ProductName }}</p>
           <p>
-            {{ vegetable.price | currency}}
+            {{ vegetable.Price | currency:'INR':'symbol'}}
           </p>
         </mat-card-content>
         <mat-card-actions>
@@ -33,5 +34,31 @@
         </mat-card-actions>
       </mat-card>    
   </div>     
+
+  <div class="vegetable-cards" style="padding-left: 8%;padding-right:8%;padding-top:2%">
+    <mat-chip-list>
+      <mat-chip>Recommended fruits</mat-chip>      
+    </mat-chip-list>
+    <mat-card class="example-card" style="display: inline-block; margin-bottom: 40px" *ngFor="let fruit of fruitList">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title></mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="fruit.imageUrl" height="180px">
+        <mat-card-content>
+          <p>{{ fruit.ProductName }}</p>
+          <p>
+            {{ fruit.Price | currency}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="openSnackBar('Item added to cart', 'View Cart')">Add to cart</button>
+          <button mat-button></button>
+        </mat-card-actions>
+      </mat-card>    
+  </div>   
+    
+
 
 

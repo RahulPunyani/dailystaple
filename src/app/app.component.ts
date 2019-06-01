@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductService } from './services/product.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dailystaple';
+  constructor(private product:ProductService){
+    this.GetCityList();
+  }
+  cityList:any =[];
+  GetCityList()
+  {
+    this.product.GetCityList().subscribe(data => this.cityList = data);
+  }
 }

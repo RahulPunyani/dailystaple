@@ -1,18 +1,15 @@
 <nav class="navbar navbar-expand-sm navbar fixed-top" style="padding: 0px;margin:0px;background-color: white">
   <div class="float-left">
-    <img src="assets/logo.png" class="logo">
+    <img src="assets/logo.png" [routerLink]="['/home']"  class="logo">
     <button mat-button [routerLink]="['/vegetables']">Vegetables</button>
-    <button mat-button>Fruits</button>
+    <button mat-button [routerLink]="['/fruits']">Fruits</button>
     <button mat-button>Groceries</button>
     <button mat-button>Personal Care</button>  
   </div>
-  <div class="float-right">                  
+  <div class="float-right">                     
           <mat-form-field>
             <mat-select placeholder="Select City">
-              <mat-option value="0">Delhi</mat-option>
-              <mat-option value="1">Pune</mat-option>
-              <mat-option value="2">Mumbai</mat-option>
-              <mat-option value="3">Bangalore</mat-option>
+              <mat-option [value]="city.id" *ngFor="let city of cityList">{{ city.CityName }}</mat-option>              
             </mat-select>
           </mat-form-field>
           

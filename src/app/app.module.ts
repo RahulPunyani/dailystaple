@@ -5,16 +5,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
+
+import { HttpClientModule } from '@angular/common/http';
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import {MatSnackBarModule, MatButtonModule, MatCheckboxModule , MatMenuModule, MatSidenavModule, MatSelectModule, MatBadgeModule, MatCardModule, MatChipsModule} from '@angular/material';
 import { VegetablesComponent } from './vegetables/vegetables.component';
+import { FruitsComponent } from './fruits/fruits.component';
+import { PersonalcareComponent } from './personalcare/personalcare.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
+import { GroceriesComponent } from './groceries/groceries.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    VegetablesComponent
+    VegetablesComponent,
+    FruitsComponent,
+    PersonalcareComponent,
+    GroceriesComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +41,12 @@ import { VegetablesComponent } from './vegetables/vegetables.component';
     MatBadgeModule,
     MatCardModule,
     MatChipsModule,
-    MatSnackBarModule
+    MatSnackBarModule,    
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireDatabaseModule
+
 
   ],
   providers: [],
